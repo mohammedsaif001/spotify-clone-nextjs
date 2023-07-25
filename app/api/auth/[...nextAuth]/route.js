@@ -1,3 +1,4 @@
+import { LOGIN_URL } from "@/lib/spotify"
 import NextAuth from "next-auth"
 import SpotifyProvider from "next-auth/providers/spotify"
 
@@ -7,7 +8,7 @@ export const authOptions = {
         SpotifyProvider({
             clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
             clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
-            authorization: LOGIN_URL
+            authorization: LOGIN_URL  //User will be sent to authorization page from SPotify
         }),
         // ...add more providers here
     ],
